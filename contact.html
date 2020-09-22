@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">   
+    <link href="https://fonts.googleapis.com/css?family=Oxanium|Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>   
+      function submitForm() {
+          var firstName = document.getElementById('firstName').value;
+          var lastName = document.getElementById('lastName').value; 
+          var message = 'Thanks for taking the time to submit our form ' + firstName + ' ' + lastName + ' we\'ll get back to you shortly!';
+          alert(message);
+          return false;
+      }
+    </script>
+    <title>Contact Me</title>
+</head>
+<body id="contact">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Sheridan Skills Competition</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="./index.html">Profile</a>
+            <a class="nav-item nav-link" href="./contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
+    <main id="contactMain">
+      <p id="formIntro">Please fill out the following form to get in contact with me for website requests and more!</p>
+      <form onsubmit="return submitForm();" method="GET" action="index.html" name="contactMe">
+          <div class="row">
+            <div class="col">
+              <input id="firstName" required type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="col">
+              <input id="lastName" required type="text" class="form-control" placeholder="Last name">
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Email address</label>
+          <input required type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">What service are you looking for?</label>
+            <select multiple class="form-control" id="exampleFormControlSelect2">
+              <option>1 Page Website</option>
+              <option>2 Page Website</option>
+              <option>3+ Page Website</option>
+              <option>General Inquiry</option>
+              <option>Other</option>
+            </select>
+          </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">When do you need it by?</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>This month</option>
+            <option>Next Month</option>
+            <option>2 Months</option>
+            <option>3 Months</option>
+            <option>3+ Months</option>
+          </select>
+        </div>     
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Anything else you would like me to know?</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div>
+          <input id="submit" type="submit">
+        </div>
+      </form>
+    </main>
+
+
+</body>
+</html>

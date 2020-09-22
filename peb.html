@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="innerPages/css/styles.css"> 
+    <title>Paige Elizabeth Belbeck</title>
+    <script defer src="https://kit.fontawesome.com/1860bf3b6f.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    
+    window.addEventListener("DOMContentLoaded", () => {
+      // open hamburger menu
+      $('.hamburger').on('click', function(){
+        // toggle class show the menu and exit bar when you click the hamburger
+        $('.nav-list-div').toggleClass('show');
+        $('.exit-menu').toggleClass('show');   
+      });
+      //close hambuger menu
+      $('.exit-menu').on('click', function(){
+        // toggle class unshow the menu and exit bar when you click the exit (x)
+        $('.nav-list-div').toggleClass('show');
+        $('.exit-menu').toggleClass('show');
+      });
+     
+
+      document.getElementById('pwcBtn').addEventListener("mouseover", () => {
+        document.getElementById('rbcHidden').style.display = "none";
+        document.getElementById('pwcHidden').style.display = "block";        
+      });
+      document.getElementById('pwcBtn').addEventListener("click", () => {
+        document.getElementById('rbcHidden').style.display = "none";
+        document.getElementById('pwcHidden').style.display = "block";        
+      });
+      document.getElementById('rbcBtn').addEventListener("mouseover", () => {
+        document.getElementById('pwcHidden').style.display = "none";
+        document.getElementById('rbcHidden').style.display = "block";
+      });
+      document.getElementById('rbcBtn').addEventListener("click", () => {
+        document.getElementById('pwcHidden').style.display = "none";
+        document.getElementById('rbcHidden').style.display = "block";        
+      });
+      
+      document.getElementById('pwcClose').addEventListener("click", () => {
+        document.getElementById('pwcHidden').style.display = "none";
+        document.getElementById('rbcHidden').style.display = "none";
+      });
+      document.getElementById('rbcClose').addEventListener("click", () => {
+        document.getElementById('pwcHidden').style.display = "none";
+        document.getElementById('rbcHidden').style.display = "none";
+      });
+      document.getElementById('nextArrow').addEventListener("click", () => {
+        document.getElementById('pwcHidden').style.display = "none";
+        document.getElementById('rbcHidden').style.display = "none";
+      });
+      document.getElementById('prevArrow').addEventListener("click", () => {
+        document.getElementById('pwcHidden').style.display = "none";
+        document.getElementById('rbcHidden').style.display = "none";
+      });
+
+    let interval = 0; 
+    document.getElementById('nextArrow').addEventListener("click", () => {    
+      if(interval>=1) {
+        interval=0;
+      } else {
+        interval++;
+      }
+      if(interval==0) {
+          document.getElementById("rbcDiv").style.display = "none";
+          document.getElementById("pwcDiv").style.display = "flex";
+      } else if(interval==1) {
+        document.getElementById("rbcDiv").style.display = "flex";
+          document.getElementById("pwcDiv").style.display = "none";
+      }      
+    });
+    document.getElementById('prevArrow').addEventListener("click", () => {
+      if(interval<=0) {
+        interval=1;
+      } else {
+        interval--;
+      }
+      if(interval==0) {
+          document.getElementById("rbcDiv").style.display = "none";
+          document.getElementById("pwcDiv").style.display = "flex";
+      } else if(interval==1) {
+          document.getElementById("pwcDiv").style.display = "none";
+          document.getElementById("rbcDiv").style.display = "flex";
+      }
+    });
+  });
+  </script>
+</head>
+<body>
+
+    <header id="mainHeader">    
+        <nav id="nav" class="navBar" name="nav">
+          <div class="flex">
+            <p class="hamburger"><i class="fas fa-bars" aria-hidden="true"></i><span class="sr-only">click here to open the menu</span></p>
+            <div class="nav-list-div">
+              <ul class="flex nav-list">
+                <li class="exit-menu menu"><i class="fas fa-times" aria-hidden="true"></i><span class="sr-only">click here to close the menu</span></li>                   
+                <li class="menu"><a id="aboutMeMenu" href="#aboutMe">About me</a></li>
+                <li class="menu"><a id="experienceMenu" href="#experience">Experience</a></li>
+                <li class="menu"><a id="volunteerMenu" href="#volunteering">Volunteering</a></li>        
+                <li class="menu"><a id="educationMenu" href="#education">Education</a></li>        
+                <li class="menu"><a id="skillsMenu" href="#skills">Skills</a></li>        
+            </ul>
+        </div>  
+          </div>
+        </nav>
+        <h1>Paige Elizabeth Belbeck</h1>
+      </header>
+      
+      
+      <main>
+        <section id="aboutMe">
+            <h2>About Me</h2>
+            <div class="flex">
+                <img src="./innerPages/assets/images/PEB.jpg" alt="headshot of Paige Belbeck">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, possimus. Cupiditate similique libero eius dicta illo earum, odit tempore voluptatibus consectetur dolorem fuga voluptas cum quaerat ipsum voluptatem? Mollitia, molestias dolor modi earum doloremque amet corrupti odit ut ducimus? Inventore ipsam sit vel praesentium in magni. Maiores, et a molestiae tempora odio quibusdam dicta debitis voluptatem temporibus provident impedit ullam repellendus quos laborum laudantium, nobis aut. Exercitationem quasi, animi labore asperiores laborum optio ex modi blanditiis possimus vitae nulla velit recusandae dolores cum voluptatum illo. Neque culpa nulla incidunt quod atque minus asperiores. Delectus dolores commodi, blanditiis veritatis eveniet perferendis?</p>
+            </div>
+            <div class="flex border">
+                <img src="./innerPages/assets/images/PEB.jpg" alt="">
+                <img src="./innerPages/assets/images/PEB.jpg" alt="">
+                <img src="./innerPages/assets/images/PEB.jpg" alt="">
+                <img src="./innerPages/assets/images/PEB.jpg" alt="">
+                <img src="./innerPages/assets/images/PEB.jpg" alt="">
+                <img src="./innerPages/assets/images/PEB.jpg" alt="">
+
+            </div>
+        </section>
+
+        <section id="experience">
+          <h2>Experience</h2>
+          <button id="prevArrow" class="arrows">
+            <i class="fas fa-chevron-left"></i> <!-- icon from https://fontawesome.com -->
+          </button>
+          <div id="pwcDiv">
+            <div class="work">
+              <img id="pwc" src="./innerPages/assets/images/pwc.jpg" alt="Price Waterhouse Coopers logo">
+              <div class="workInfo">
+                <h3 class="workTitle workDesc">PWC Audit and  Assurance</h3>
+                <p class="workPositions">Senior Associate August 20176 - July 2020<br> Associate September 2014 - July 2016<br>Summer Student May 2013 - August 2013</p>
+              </div>
+            </div>
+            <button id="pwcBtn" class="moreDetails">Click/hover for more details</button>
+            <div id="pwcHidden" class="hidden">
+              <i id="pwcClose" class="far fa-times-circle"></i>
+              <h3>Responsibilities</h3>
+              <ul class="arrowBulletList">
+                <li>X</li>
+                <li>Y</li>
+                <li>Z</li>
+              </ul>
+            </div>
+          </div>
+          <div id="rbcDiv">
+            <div class="work">
+              <img id="rbc" src="./innerPages/assets/images/rbc.png" alt="rbc logo">
+              <div class="workInfo">
+                <h3 class="workTitle workDesc">RBC Financial Analyst</h3>
+                <p class="workPosition">Senior Associate August 20176 - July 2020<br> Associate September 2014 - July 2016<br>Summer Student May 2013 - August 2013</p>
+              </div>
+            </div>
+            <button  id="rbcBtn" class="moreDetails">Click/hover for more details</button>
+            <div id="rbcHidden" class="hidden">     
+              <i id="rbcClose" class="far fa-times-circle"></i>
+              <h3>Responsibilities</h3>
+              <ul class="arrowBulletList">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+              </ul>
+            </div>
+         </div>
+          <button id="nextArrow" class="arrows">
+            <i class="fas fa-chevron-right"></i><!-- icon from https://fontawesome.com -->
+          </button>
+        </section>
+
+        <section id="volunteering">
+          <h2 id="volunteerHeader">Volunteering</h2> 
+          <div id="riverwood" class="volunteerWork">
+            <h3>Riverwood Conservatory Conservation Activities</h3>
+            <img src="" alt="">
+          </div>
+          <i class="fas fa-arrows-alt-h" id="fa-arrows-alt-h1"></i>
+          <div id="riverwoodDetails" class="volunteerDetails">
+            <h3>Details:1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque obcaecati quae modi ratione quos necessitatibus quod a exercitationem quibusdam earum.</p>
+          </div>
+          
+          
+          <div id="firstZoo" class="volunteerWork">
+            <h3>First Zoo Canada</h3>
+            <img src="" alt="">
+          </div>
+          <i class="fas fa-arrows-alt-h" id="fa-arrows-alt-h2"></i>
+          <div id="firstZooDetails" class="volunteerDetails">
+            <h3>Details:2</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque obcaecati quae modi ratione quos necessitatibus quod a exercitationem quibusdam earum.</p>
+          </div>
+          
+          <div id="mra" class="volunteerWork">
+            <h3>Mississauga Ringette Association</h3>
+          </div>
+          <i class="fas fa-arrows-alt-h" id="fa-arrows-alt-h3"></i>
+          <div id="mraDetails" class="volunteerDetails">
+            <h3>Details:3</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque obcaecati quae modi ratione quos necessitatibus quod a exercitationem quibusdam earum.</p>
+          </div>
+
+
+        </section>  
+      
+        <section id="education">
+          <h2>Education</h2>   
+
+          <div class="edu">
+            <img src="./innerPages/assets/images/CPA.jpg" alt="CPA Ontario logo">
+            <div>
+              <h3>CPA Ontario</h3>
+              <ul class="arrowBulletList">
+                <li>Degree: CPA</li>
+                <li>GPA:</li>
+                <li>December 2018?</li>
+              </ul>
+            </div>
+          </div>
+          <div class="edu">
+            <img src="./innerPages/assets/images/guelph.jpg" alt="University of Guelph logo">
+            <div>
+              <h3>University of Guelph</h3>
+              <ul class="arrowBulletList">
+                <li>Degree:</li>
+                <li>GPA:</li>
+                <li>April 2014?</li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+
+
+
+        <section id="skills">
+          <h2 id="skillsHeader">Skills<br>/5<i class="fas fa-star"></i></h2>
+          <div id="leadership" class="skillSections">
+            <h3 class="underline">Leadership</h3>
+            <p>Decision making&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          </div>
+          <div id="financialRep" class="skillSections">
+            <h3 class="underline">Financial Reporting</h3>
+            <p>IFRS&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+            <p>USGAAP&nbsp;&nbsp;&nbsp;&nbsp;</i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+            <p>ASPE&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          </div>
+          <div id="softwareApps" class="skillSections">
+            <h3 class="underline">Software Apps</h3>
+            <p>Alterex&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          </div>
+          <div id="otherSkills" class="skillSections">
+            <h3 class="underline">Other/Soft</h3>
+            <p>Open mindedness&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+          </div>
+          
+        </section>
+
+      </main>
+
+
+</body>
+</html>
+

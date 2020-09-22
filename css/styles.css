@@ -1,0 +1,841 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+html {
+    scroll-behavior: smooth;
+    font-family: 'Amatic SC', cursive;
+}
+.small {
+    font-size: 1rem;
+}
+
+/* header styles */
+header {
+    background-image: url(../assets/images/montenegro2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+h1 {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 25px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 5rem;
+    width: 350px;
+    height: 150px;
+    color: white;
+    position: absolute;
+    top: calc(50% - 150px / 2);
+    left: calc(50% - 350px / 2);
+    box-shadow: 5px 5px 12px white; 
+}
+#nav {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+.home-menu {
+    position: relative;}
+.menu {
+    display: block;
+    color: white;
+    width: 100px;
+    margin: 0px;
+    text-align: center;}
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0px auto;
+}
+.nav-list li { 
+    transition-property: all;
+    transition-duration: .3s, .3s;
+    border-radius: 20px;
+    margin: 10px auto;
+}
+.flex,.flexBW {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+}
+.nav-list a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition-property: all;
+    transition-duration: .5s;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+    font-size: 1.8rem;
+}
+#nav.scrolled {
+    background-color: #000;
+    transition: background-color 200ms linear;
+  }
+
+/* end header styles */
+
+/* general styles */
+section {
+    width: 70%;
+    margin: 0px auto;
+}
+h2 {
+font-size: 3.5rem;
+margin: 0px;
+}
+.white {
+    background-color: white;
+    padding: 75px 0px;
+}
+.grey {
+    background-color: lightgrey;
+    width:100%;
+    padding: 75px 0px;
+}
+
+
+/* about me styles */
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.aboutMeP {
+    max-width: 700px;
+    margin: 30px 0;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    letter-spacing: .2rem;
+    font-family: 'Caveat', cursive;
+}
+.right {
+    align-self: flex-end;
+}
+.left {
+    align-self: flex-end;
+}
+#aboutMe img {
+    max-width: 300px;
+}
+/* end about me styles */
+
+/* start video styles */
+.fullWidth {
+    width: 100%;
+}
+video {
+    display: block; 
+}
+
+
+/* end video styles */
+
+/* portfolio styles */
+#portfolio {
+    width: 100%;
+}
+.inner {
+    width: 70%;
+    margin: 25px auto;
+}
+.circle {
+    border-radius:50%;
+    border: solid 0px white;
+    box-shadow: 5px 5px 7px;
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    transition: all 1.2s ease;
+}
+.circle:hover {
+    border:solid 3px white;
+    box-shadow: 5px 5px 7px black;
+    transform: scale(1.5);
+}
+#game:hover {
+    background-image: url(../assets/images/portfolio/game.jpg);
+}
+#game {
+    grid-area: game;
+}
+#cricketMeadows:hover {
+    background-image: url(../assets/images/portfolio/CMF.jpg);
+    background-size: cover;
+}
+#cricketMeadows{
+    grid-area: cricketMeadows;
+}
+#peb {
+    grid-area: peb;
+}
+#peb:hover {
+    background-image: url(../assets/images/portfolio/peb.jpg);
+    background-size: cover;
+}
+#pizza {
+    grid-area: pizza;
+}
+#pizza:hover {
+    background-image: url(../assets/images/portfolio/pizza.gif);  /* image from https://www.google.com/url?sa=i&url=https%3A%2F%2Fgiphy.com%2Fgifs%2Fbuzzfeedanimation-dance-TH2eOxBITDr6PqIcpP&psig=AOvVaw1XvF0h2R3nJkfkqebSVch-&ust=1599712731521000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOCFxsyg2-sCFQAAAAAdAAAAABAP  */
+    background-size: cover;
+    background-color: red;
+}
+#wine {
+    grid-area: wine;
+}
+#wine:hover{
+    background-image: url(../assets/images/portfolio/wine.jpg);
+    background-size: cover;
+}
+
+#studentApp {
+    grid-area: student;
+}
+#studentApp:hover {
+    background-image: url(../assets/images/portfolio/student.jpg); /* image from https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flearningstudio.com%2F3-factors-impact-how-primary-students-learn%2F&psig=AOvVaw3U-qOMAwqt5j0viSPLP1mi&ust=1599714266183000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjBiJqm2-sCFQAAAAAdAAAAABAD*/ 
+    background-size: cover;
+}
+#test {
+    grid-area: test;
+}
+#test:hover {
+    background-image: url(../assets/images/portfolio/php.JPG);
+    background-size: cover;
+}
+#dreams {
+    grid-area: dreams;
+}
+#dreams:hover {
+    background-image: url(../assets/images/portfolio/dream.JPG);
+    background-size: cover;
+}
+#evals {
+    grid-area: evals;
+}
+#evals:hover {
+    background-image: url(../assets/images/portfolio/evals.JPG);
+    /* image from: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fpylon-cones&psig=AOvVaw267vE7it-x1wz25y9gSsyr&ust=1599496141019000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCyqsz51OsCFQAAAAAdAAAAABAG */
+    background-size: cover;
+}
+.polkadots {
+    display: grid;
+    justify-items: center;
+    margin: 0px auto;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'game . cricketMeadows'
+                         ' . peb .'
+                         'pizza . wine'
+                         '. student .'
+                         'test . dreams'
+                         '. evals .';
+}
+.golden {
+    background-color:goldenrod;
+}
+.maroon {
+    background-color: maroon;
+}
+.darkcyan {
+    background-color: darkcyan;
+}
+.orange {
+    background-color: orangered;
+}
+.navy {
+    background-color: navy;
+}
+.pink {
+    background-color: rgb(255,182,193);
+}
+.midnightblue {
+    background-color: midnightblue;
+}
+.purple {
+    background-color: purple;
+}
+.portfolioTitle {
+    font-size: 2rem;    
+    margin: 45px auto;
+    text-align: center;
+}
+.description{
+    width: 200px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+}
+a {
+    text-decoration:none; 
+    color: white;
+}
+.javaHeader nav div ul li {
+    margin: 10px 0px;
+    width:150px;
+}
+.javaHeader {
+    background-color: black;
+    height: 50px;   
+    background-image: none;
+}
+.javaArrow {
+    font-size: 1.1rem;
+}
+.javaTitle {
+    background-color: white;
+    color: black;
+    width: 500px; 
+    top: 100px;
+    left: calc(50% - 500px / 2);
+}
+/* end portfolio styles */
+
+/* start java video pages styles */
+.javaVidDiv {
+    margin: 250px auto;
+    max-width: 700px;
+}
+.javaVid{
+    margin: 0px auto;
+    max-width: 500px;
+}
+/* end java video page styles */
+
+/* start education styles */
+#education {
+    /* margin:  */
+    position: relative; 
+    height: 800px;
+}
+.school {
+    flex-direction: column;
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+}
+.arrows {
+    position: absolute;
+    outline: none;
+    cursor: pointer;
+}
+#prevArrow {
+    top: 250px;
+    left: -50px;
+}
+#nextArrow {
+    top: 250px;
+    right: -50px;
+}
+#sheridan,#wlu, #hackerYou {
+    border-radius: 50%;
+    max-width: 200px;
+    margin: 20px auto;
+    justify-content: center;
+    position: absolute; 
+    top: 0;
+    left: calc(50% - 200px / 2);
+}
+#wluDiv, #hackerYouDiv, #sheridanDiv {
+    position: absolute;
+    top: 150px;
+}
+#wluDiv {
+    color: rebeccapurple;
+    display: none;
+}
+#hackerYouDiv {
+    display: none;
+    color: maroon;
+}
+#sheridanDiv {
+    color: midnightblue;
+}
+.schoolDesc {
+    max-width: 600px;
+    padding: 25px;
+    margin: 0px auto;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.schoolTitle {
+    margin: 220px auto 20px;
+    font-size: 1.5rem;
+    max-width: 450px;
+    padding: 15px;
+}
+i {
+    font-size: 2rem;
+}
+button {
+    border: none;
+    background-color: white;
+    height: 400px;
+    padding: 0px 20px;
+}
+/* end education styles */
+
+/* start work styles */
+#grid {
+    margin: 15px;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'rbc1 rbc2 deloitte'
+                         'rbc3 rbc4 new';
+}
+#experience img{
+    width: 100px;
+}
+#work1 {
+    grid-area:rbc1;
+    background-image: url(../assets/rbc-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#work2 {
+    grid-area:rbc2;
+    background-image: url(../assets/rbc-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#work3{
+    grid-area:deloitte;
+    background-image: url(../assets/deloitte-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#work4 {
+    grid-area:rbc3;
+    background-image: url(../assets/rbc-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#work5 {
+    grid-area:rbc4;
+    background-image: url(../assets/rbc-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* container for hidden sections */
+.hidden {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 400px; 
+    height: 450px;
+    padding: 15px;
+    box-shadow: 5px 5px 8px;
+    margin: 0 auto;
+    background-color: whitesmoke;
+}
+.work {
+    margin: 0 auto;
+    display: none;
+    font-family: 'Quicksand', sans-serif;
+}
+.workLogo {
+    grid-area: 1 / 1 / 2 / 2;
+    padding-top: 10px;
+}
+.workTitle{
+    grid-area: 1 / 2 / 2 / 4;
+    font-size: 1.3rem;
+}
+.workDesc {
+    grid-area: 2 / 1 / 5 / 4;
+    font-size: 1.1rem;
+}
+#new img {
+    border-radius: 50%;
+    width: 65px;
+    margin: 5px;
+}
+#new {
+    display: grid;
+}
+/* end work styles */
+
+/* start skills styles */
+#skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'skillsHeader skillsHeader skillsHeader skillsHeader'
+                         'html fiveStar reliable fiveStar3'
+                         'css fiveStar2 timeMgmt fiveStar4'
+                         'javascript threeStar problemSolving fiveStar5'
+                         'java threeHalfStar learn fiveStar6'
+                         'linux twoStar2 teamwork fiveStar7'
+                         'excel fourStar learning learning'
+                         'ajax oneStar learning learning'
+                         'json oneStar2 learning learning'
+                         'sql twoStar learning learning'
+                         'cLang twoStar3 learning learning';
+}
+#skills h2 {
+    margin-bottom: 100px;
+}
+#skills h3 {
+    text-align: right;
+    margin: 10px 10px 50px;
+    font-size: 2rem;
+}
+#skillsHeader {
+    grid-area: skillsHeader;
+}
+#learning {
+    grid-area: learning;
+}
+#html{
+    grid-area: html;
+}
+#css{
+    grid-area: css;
+}
+#javascript{
+    grid-area: javascript;
+}
+#java{
+    grid-area: java;
+}
+#linux{
+    grid-area: linux;
+}
+#excel{
+    grid-area: excel;
+}
+#ajax{
+    grid-area: ajax;
+}
+#json{
+    grid-area: json;
+}
+#sql{
+    grid-area: sql;
+}
+#cLang{
+    grid-area: cLang;
+}
+#reliable{
+    grid-area: reliable;
+}
+#timeMgmt{
+    grid-area: timeMgmt;
+}
+#problemSolving{
+    grid-area: problemSolving;
+}
+#learn{
+    grid-area: learn;
+}
+#teamwork{
+    grid-area: teamwork;
+}
+#creativity{
+    grid-area: creativity;
+}
+#communication{
+    grid-area: communication;
+}
+.star {
+    padding: 5px;
+}
+.fiveStar {
+    grid-area: fiveStar;
+}
+.fiveStar2 {
+    grid-area:fiveStar2;
+}
+.fiveStar3 {
+    grid-area:fiveStar3;
+}
+.fiveStar4 {
+    grid-area:fiveStar4;
+}
+.fiveStar5 {
+    grid-area:fiveStar5;
+}
+.fiveStar6 {
+    grid-area:fiveStar6;
+}
+.fiveStar7 {
+    grid-area:fiveStar7;
+}
+/* .fourHalfStar{
+    grid-area: fourHalfStar;
+} */
+/* .fourStar3 {
+    grid-area: fourStar3;
+}
+.fourStar2 {
+    grid-area: fourStar2;
+} */
+.fourStar {
+    grid-area: fourStar;
+}
+.threeHalfStar{
+    grid-area: threeHalfStar;
+}
+.threeStar {
+    grid-area:threeStar;
+}
+.twoStar {
+    grid-area: twoStar;
+}
+.twoStar2 {
+    grid-area:twoStar2;
+}
+.twoStar3 {
+    grid-area:twoStar3;
+}
+.oneStar {
+    grid-area: oneStar;
+}
+.oneStar2 {
+    grid-area: oneStar2;
+}
+.learning{
+    margin: 0 auto;
+}
+/* end skills styles */
+
+
+
+/* start footer styles  */
+footer {
+    height: 25vh;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    margin: 0px;
+    padding-bottom: 25px;
+
+}
+footer a {
+    margin: 25px;
+}
+footer div a i:hover {
+    color: grey;
+}
+/* end footer styles */
+
+
+
+
+/* responsive styles */
+@media screen and (max-width:1500px) {
+    #grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'rbc1 rbc2' 
+                             'deloitte rbc3'
+                             'rbc4 new';
+    }
+    .left {
+        align-self: flex-start;
+    }
+    #ringette{
+        align-self: flex-end;
+    }
+    .circle {
+        width: 175px;
+        height: 175px;
+    }
+    .portfolioTitle{
+        font-size: 1.5rem;
+        margin: 30px auto 10px;
+    }
+    .description {
+        font-size: 1rem;
+        width: 150px;
+    }
+    #wluDiv, #hackerYouDiv, #sheridanDiv{
+        top: 150px;
+    }
+    #skills{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'skillsHeader skillsHeader'
+                             'html fiveStar'
+                             'css fiveStar2'
+                             'javascript threeStar'
+                             'java threeHalfStar'
+                             'linux twoStar2'
+                             'excel fourStar'
+                             'ajax oneStar'
+                             'json oneStar2'
+                             'sql twoStar'
+                             'cLang twoStar3'
+                             'reliable fiveStar3'
+                             'timeMgmt fiveStar4'
+                             'problemSolving fiveStar5'
+                             'learn fiveStar6'
+                             'teamwork fiveStar7'
+                             'learning learning';
+    }
+}
+@media screen and (max-width:1000px) {
+    .hidden {
+        width: 250px; 
+        height: 300px;
+    }
+    .workLogo {
+        max-width: 75px;
+    }
+    .workTitle {
+        font-size: .9rem;
+    }
+    .workDesc {
+        font-size: .7rem;
+    }
+    .circle {
+        width: 125px;
+        height: 125px;
+    }
+    .portfolioTitle{
+        font-size: 1rem;
+        margin: 2   0px auto 10px;
+    }
+    .description {
+        font-size: 0.8rem;
+        width: 100px;
+    }
+    #wluDiv, #hackerYouDiv, #sheridanDiv {
+        top: 150px;
+    }
+    #wlu,#hackerYou,#sheridan {
+        max-width: 150px;
+        left: calc(50% - 150px / 2);
+    }
+    #aboutMe img {
+        max-width: 200px;
+    }
+    
+}
+@media screen and (max-width:750px) {
+    .small {
+        font-size: .6rem;
+    }
+    .javaTitle{
+        width: 300px; 
+        padding: 0px;
+        top: 100px;
+        left: calc(50% - 300px / 2);
+    }
+    .javaVid {
+        max-width: 300px;
+    }
+    .javaVidDiv {
+        max-width: 300px;
+    }
+    .arrows {
+        padding: 20px;
+    }
+    #prevArrow {
+        left: -40px;
+    }
+    #nextArrow {
+        right: -40px;
+    }
+    i {
+        font-size: 1.1rem;
+    }
+    #skills h3 {
+        /* margin: 5px; */
+        font-size: 1rem;
+    }
+    .schoolDesc {
+        font-size: .8rem;
+        max-width: 250px
+    }
+    .schoolTitle {
+        font-size: 1.1rem;
+    }
+    .inner,#aboutMe {
+        width: 80%;
+    }    
+    .aboutMeP {
+        font-size: 1.2rem;
+    }
+    .right {
+        align-self: flex-start;
+    }
+    .nav-list li {
+        width: 100px;
+    }
+    img#me {
+        max-width: 125px;
+    }
+    .polkadots {
+        grid-gap: 0px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'game . '
+                             '. cricketMeadows' 
+                             'peb .'
+                             '. pizza'
+                             'wine .'
+                             '. student'
+                             'test .'
+                             '. dreams'
+                             'evals .';
+    }
+    #grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'rbc1'
+                             'rbc2'
+                             'deloitte'
+                             'rbc3'
+                             'rbc4'
+                             'new';
+    }
+    #education {
+        height: 900px;
+    }
+
+} 
+@media screen and (max-width:500px) {
+    .polkadots {
+        grid-gap: 0px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'game'
+                             'cricketMeadows' 
+                             'peb'
+                             'pizza'
+                             'wine'
+                             'student'
+                             'test'
+                             'dreams'
+                             'evals';
+    }
+    h1 {
+        font-size: 2.5rem;
+        width: 200px;
+        height: 110px;
+        top: calc(50% - 110px / 2);
+        left: calc(50% - 200px / 2);
+    }
+}

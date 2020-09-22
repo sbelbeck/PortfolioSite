@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam Belbeck - Web Developer</title>
+    <link rel="stylesheet" href="css/styles.css">   
+    <link type="image/png" href="./assets/images/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat&family=Indie+Flower&family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1860bf3b6f.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        $(function () {
+          $(document).scroll(function () {
+          var $nav = $(".navBar");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+          });
+        });
+        
+        let interval = 0;
+        const prevButton = document.getElementById("prevArrow");
+        const nextButton = document.getElementById("nextArrow")
+        
+        nextButton.addEventListener("click", () => {
+          if(interval>=2) {
+            interval=0;
+          } else {
+            interval++;
+          }
+          if(interval==0) {
+              document.getElementById("wluDiv").style.display = "none";
+              document.getElementById("hackerYouDiv").style.display = "none";
+              document.getElementById("sheridanDiv").style.display = "block";
+          } else if(interval==1) {
+              document.getElementById("wluDiv").style.display = "none";
+              document.getElementById("hackerYouDiv").style.display = "block";
+              document.getElementById("sheridanDiv").style.display = "none";
+          } else if(interval==2) {
+              document.getElementById("wluDiv").style.display = "block";
+              document.getElementById("hackerYouDiv").style.display = "none";
+              document.getElementById("sheridanDiv").style.display = "none";
+          }
+          
+
+        });
+        prevButton.addEventListener("click", () => {
+          if(interval<=0) {
+            interval=2;
+          } else {
+            interval--;
+          }
+          if(interval==0) {
+              document.getElementById("wluDiv").style.display = "none";
+              document.getElementById("hackerYouDiv").style.display = "none";
+              document.getElementById("sheridanDiv").style.display = "block";
+          } else if(interval==1) {
+              document.getElementById("wluDiv").style.display = "none";
+              document.getElementById("hackerYouDiv").style.display = "block";
+              document.getElementById("sheridanDiv").style.display = "none";
+          } else if(interval==2) {
+              document.getElementById("wluDiv").style.display = "block";
+              document.getElementById("hackerYouDiv").style.display = "none";
+              document.getElementById("sheridanDiv").style.display = "none";
+          }
+        });
+
+
+        const rbc1 = document.getElementById("work1");
+        const rbc2 = document.getElementById("work2");
+        const deloitte = document.getElementById("work3");
+        const rbc3 = document.getElementById("work4");
+        const rbc4 = document.getElementById("work5");
+
+      rbc1.addEventListener("mouseover", ()=>{         
+        document.getElementById("work1").style.backgroundImage = "none";
+        document.getElementById("rbc1").style.display = "grid";
+      });
+       
+      rbc1.addEventListener("mouseout", ()=>{
+          document.getElementById("rbc1").style.display = "none";
+          document.getElementById("work1").style.backgroundImage = "url(assets/rbc-logo.png)";
+       });
+
+       rbc2.addEventListener("mouseover", ()=>{
+          document.getElementById("rbc2").style.display = "grid";
+          document.getElementById("work2").style.backgroundImage = "none";
+       });
+       rbc2.addEventListener("mouseout", ()=>{
+          document.getElementById("rbc2").style.display = "none";
+          document.getElementById("work2").style.backgroundImage = "url(assets/rbc-logo.png)";
+
+       });
+
+       deloitte.addEventListener("mouseover", ()=>{
+          document.getElementById("deloitte").style.display = "grid";
+          document.getElementById("work3").style.backgroundImage = "none";
+       });
+       deloitte.addEventListener("mouseout", ()=>{
+          document.getElementById("deloitte").style.display = "none";
+          document.getElementById("work3").style.backgroundImage = "url(assets/deloitte-logo.png)";
+       });
+
+       rbc3.addEventListener("mouseover", ()=>{
+          document.getElementById("rbc3").style.display = "grid";
+          document.getElementById("work4").style.backgroundImage = "none";
+       });
+       rbc3.addEventListener("mouseout", ()=>{
+          document.getElementById("rbc3").style.display = "none";
+          document.getElementById("work4").style.backgroundImage = "url(assets/rbc-logo.png)";
+       });
+
+       rbc4.addEventListener("mouseover", ()=>{
+          document.getElementById("rbc4").style.display = "grid";
+          document.getElementById("work5").style.backgroundImage = "none";
+       });
+       rbc4.addEventListener("mouseout", ()=>{
+          document.getElementById("rbc4").style.display = "none";
+          document.getElementById("work5").style.backgroundImage = "url(assets/rbc-logo.png)";
+       });
+
+      //  function isInViewport(element) {
+      //   const rect = element.getBoundingClientRect();
+      //   return (
+      //     rect.top >= 0 &&
+      //     rect.left >= 0 &&
+      //     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      //     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      //   );
+      // }
+      // const game = document.getElementById('game');
+      // if (isInViewPort(game)) {
+      //   game.style.backgroundImage = "url(./assets/images/portfolio/game.jpg)";
+      //   game.style.backgroundSize = "cover";
+      //   game.style.transform = "scale(1.5)";
+        
+      // }
+
+      });
+    </script>
+</head>
+<body id="index">
+  <header id="mainHeader">    
+    <nav id="nav" class="navBar" name="nav">
+      <div>
+          <ul class="flex nav-list">
+            <li class="menu"><a id="aboutMeMenu" href="#aboutMe">About Me</a></li>
+            <li class="menu"><a id="portfolioMenu" href="#portfolio">Portfolio</a></li>
+            <li class="menu"><a id="resumeMenu" href="#education">Resume</a></li>        
+          </ul>
+      </div>
+    </nav>
+    <h1>Sam Belbeck</h1>
+  </header>
+  
+  <section class="white" id="aboutMe">
+    <div class="flexBW">
+      <h2 class="inline">About me</h2>
+      <img id="me" src="./assets/images/me.png" alt="headshot of Sam Belbeck">
+    </div>
+    <p class="aboutMeP right">Hi I'm Sam - a web/software developer in the GTA. I graduated from business school in 2016 then worked at the bank for a few years. I decided to go back to school in Fall of 2019 and have enjoyed every moment of Sheridan's software development and network engineering program since.</p>
+    <a href="#droneVid"><img src="./assets/images/portfolio/drone2.png" alt="drone picture overlooking a like in a world like view"></a>
+    <p class="aboutMeP left">Developing sites and application is a creative process that has helped me fall in love with the journey and pushes me to expand my knowledge and skills in the field every day.</p>
+    <img id="ringette" src="./assets/images/ringette.png" alt="ringette pic">
+    <p class="aboutMeP right">I love everything tech, the great outdoors, and sports (go pens)! On my time off you can find me getting in some exercise or activities outdoors, out exploring with my drone, coding away at who knows what, playing Ringette or cozied up on the couch with my sister's pup watching hockey!</p>
+    <p class="aboutMeP left">Now let's get to the real stuff...</p>
+  </section>
+  
+  <section id="portfolio" class="grey">
+    <div class="inner">
+      <h2>Portfolio</h2>
+    </div>
+      <div class="polkadots">
+        <div id="game" class="circle darkcyan"><a target="_blank" href="http://belbecsa.dev.fast.sheridanc.on.ca/Zapp/">
+          <p class="portfolioTitle">1st JavaScript<br> Game (using Zim)</p>
+          <p class="description">A double-edged motion controlled game</p></a>
+        </div>
+        <div id="cricketMeadows" class="circle midnightblue"><a target="_blank" href="http://cricketmeadows.ca">
+            <p class="portfolioTitle">Cricket Meadows <br>Farms Website</p></a>
+        </div>
+        <div id="peb" class="circle maroon"><a target="_blank" href="./peb.html">
+          <p class="portfolioTitle">Paige Belbeck<br>Resume Website</p></a></div>
+        <div id="pizza" class="circle orange"><a href="./pizzaOrder.html">
+          <p class="portfolioTitle">Pizza Ordering <br>App</p></a></div>
+          <div id="studentApp" class="circle golden"><a id="studentLink" href="./student.html">
+            <p class="portfolioTitle">Student List <br>Filter App</p></a></div>
+        <div id="wine" class="circle purple"><a href="./wine.html">
+          <p class="portfolioTitle">Wine Record <br>App</p></a></div>
+        <div id="test" class="circle pink"><a target="_blank" href="http://belbecsa.dev.fast.sheridanc.on.ca/A5_SamBelbeck.php">
+          <p class="portfolioTitle">PHP Basics quiz <br>with hidden answers</p></a>
+        </div>
+        <div id="dreams" class="circle darkcyan"><a target="_blank" href="http://belbecsa.dev.fast.sheridanc.on.ca/Dream_Records/">
+          <p class="portfolioTitle">Dream Logger</p>
+        <p class="description">Keep a record of your dreams with a database</p></a>
+        </div>
+        <div id="evals" class="circle midnightblue"><a target="_blank" href="http://belbecsa.dev.fast.sheridanc.on.ca/Tryout_Evaluations/">
+          <p class="portfolioTitle">Tryout Evaluation <br>Form using JSON</p></a>
+        </div>
+      </div>
+  </section>
+
+  <section id="education" class="white">
+      <h2>Education</h2>
+    <button id="prevArrow" class="arrows">
+      <i class="fas fa-chevron-left"></i> <!-- icon from https://fontawesome.com -->
+    </button>
+    <div id="wluDiv" class="flex school">
+      <img id="wlu" src="./assets/WLU.jpg" alt="Wilfrid Laurier University Crest">
+      <h3 class="schoolTitle schoolDesc" >Honours Bachelor of Business Administration major in Accounting<br>September 2012 - April 2016</h3>
+      <p class="schoolDesc">My time at Laurier has taught me great communication and presentation skills, analytical skills and problem solving skills. A lot of group work, many long nights finishing projects and a good support network has helped toughen my skin and prepared me for the determination it takes to get things done. Whatever it takes!</p>
+    </div>
+    <div id="hackerYouDiv" class="flex school">
+      <img id="hackerYou" src="./assets/hackerYou.png" alt="HackerYou logo">
+      <h3 class="schoolTitle schoolDesc">Completion of HackerYou's Web Development Course<br>July 2019</h3>
+      <p class="schoolDesc">HackerYou (now Juno) opened my eyes to the world of web development in a fun a interesting way. We had packed 8-hour days for 2 weeks straight, but they kept things interesting and light. With such great content and delivery and some site building  challenges to test our knowledge and creativity, I still can't believe all that I learned in 10 short days there.</p>
+    </div>
+    <div id="sheridanDiv" class="flex school">
+      <img id="sheridan" src="./assets/sheridan.jpg" alt="Sheridan College">
+      <h3 class="schoolTitle schoolDesc">Candidate for Sheridan's Software Development and Network Engineering Advanced Diploma <br>September 2019 - December 2022</h3>
+      <p class="schoolDesc">Sheridan has really brought out my creative side and challenges me to think differently. I have always looked at programming as more technical, but the constant problem solving and having the end experience in mind has really pushed me to think outside the box throughout the entire process. Different is good, different is new, different is fun.<br> <span class="small">* Won 1st place in Skills Sheridan 2020 Web Design and Development competition</span></p>
+    </div>
+    <button id="nextArrow" class="arrows">
+      <i class="fas fa-chevron-right"></i><!-- icon from https://fontawesome.com -->
+    </button>
+  </section>
+  
+
+
+
+  
+  <section id="experience" class="grey">
+    <div class="inner">
+      <h2 id="experienceHeader">Experience</h2>
+    </div>
+    <div id="grid">
+      <div id="work1" class="hidden">
+        <div id="rbc1" class="work">
+          <img class="workLogo" src="./assets/rbc.png" alt="rbc logo">
+          <h3 class="workTitle">FSS* Business Analyst<br>August 2018 - July 2019</h3>
+          <p class="workDesc">Worked with a team of managers to improve business and process inefficiencies. Took part in a redesign of current processes to create standardization efficiencies across common tasks. Participated in testing phases to ensure accuracy of implementation. Helped create a number of reporting outlooks for manager review, including attestation results, employee variations, audit issues and more.<br><br>* Finance Shared Services</p>
+        </div>
+      </div>
+      <div id="work2" class="hidden">
+      <div id="rbc2" class="work">
+        <img class="workLogo" src="./assets/rbc.png" alt="rbc logo">
+        <h3 class="workTitle">FSS* Reconciliation Officer<br>September 2016 - August 2018</h3>
+        <p class="workDesc">Took lead over the reconciliation of RBCs US banking processes, increasing capacity by onboarding 6 new reconciliations while maintaining relationship standards. Strong system investigation skills gave me the opportunity to move over the newer digital cheque imaging processes which was an eye opener in terms of where technology is taking things. Completed detailed documentations of unique investigations to be shared with the team.<br><br>* Finance Shared Services</p>
+        </div>  
+      </div>
+      <div id="work3" class="hidden">
+        <div id="deloitte" class="work">
+          <img class="workLogo" src="./assets/Deloitte.png" alt="deloitte logo">
+          <h3 class="workTitle">Audit & Assurance Staff Accountant<br>Summer 2015</h3>
+          <p class="workDesc">As part of a team, audit financial statements to provide assurance to clients. Performed tests on company account balances, saving the firm the cost of outsourcing work to IT through strong Microsoft Excel skills. Created instructional videos with audio and visual cues to help clients better understand and utilize features on our SharePoint sites.</p>
+        </div>
+        </div>  
+      <div id="work4" class="hidden">
+        <div id="rbc3" class="work">
+          <img class="workLogo" src="./assets/rbc.png" alt="rbc logo">
+          <h3 class="workTitle">SRR* Financial Analyst<br>Summer 2014</h3>
+          <p class="workDesc">Assisted in quarterly reporting to increase management efficiency. Performed many detailed calculation checks to ensure accuracy of reporting before release. Prepared impaired securities schedule for assessment ensuring prompt action. Helped generate reports used for management decisions.<br><br>* Statutory & Regulatory Reporting</p>
+        </div>
+      </div>
+      <div id="work5" class="hidden">
+        <div id="rbc4" class="work">
+          <img class="workLogo" src="./assets/rbc.png" alt="rbc logo">
+          <h3 class="workTitle">Customer Service Representative <br>November 2013 - March 2014</h3>
+          <p class="workDesc">Improved customer relations through friendly and professional client interactions. Developed strong knowledge of products and services offered in order to promote products of quality and purpose to each client. Enhanced attention to detail and organizational skills through administrative duties and diligent checks to avoid fraudulent transactions. Established strong time management skills in order to maintain my academics while learning and improving every day on the job.</p>
+        </div>
+      </div>  
+    </div>
+  </section>
+  
+  
+
+
+
+  <section id="skills" class="white">
+    <h2 id="skillsHeader">Skills <br>/ 5 <i class="fas fa-star"></i></h2> <!-- icon from https://fontawesome.com -->
+    <h3 id="html">HTML</h3>
+    <h3 id="css">CSS</h3>
+    <h3 id="javascript">JavaScript</h3>
+    <h3 id="java">Java</h3>
+    <h3 id="linux">Linux</h3>
+    <h3 id="excel">Excel</h3>
+    <h3 id="cLang">C</h3>
+    <h3 id="sql">SQL</h3>
+    <h3 id="ajax">AJAX</h3>
+    <h3 id="json">JSON</h3>
+    <h3 id="reliable">dependability</h3>
+    <h3 id="timeMgmt">time management</h3>
+    <h3 id="problemSolving">problem solving</h3>
+    <h3 id="learn">willingness to learn</h3>
+    <h3 id="teamwork">teamwork</h3>
+
+    <div class="star fiveStar">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <!-- <div class="star fourHalfStar">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i>
+      // icon from https://fontawesome.com
+    </div> -->
+    <div class="star fourStar">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div class="star threeHalfStar">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div class="star threeStar">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div class="star twoStar">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div class="star oneStar">
+      <i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div class="star fiveStar7">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div class="star fiveStar6">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div class="star fiveStar5">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div class="star fiveStar4">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div class="star fiveStar3">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div class="star fiveStar2">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <!-- <div class="star fourStar3">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>// icon from https://fontawesome.com 
+    </div>
+    <div class="star fourStar2">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>// icon from https://fontawesome.com
+    </div> -->
+    <div class="star twoStar3">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div class="star twoStar2">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div class="star oneStar2">
+      <i class="fas fa-star"></i><!-- icon from https://fontawesome.com -->
+    </div>
+    <div id="learning" class="hidden">
+      <div id="new" class="work">
+        <img class="workLogo" src="./assets/learning.png" alt="picture of a brain"> <!-- image from https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.insightsintoimpact.com%2Fevaluative-thinking-the-heart-of-meaningful-useful-evaluation%2F&psig=AOvVaw2JWEqqX2BMXhelDkxQlXUG&ust=1599670955384000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMCmxOuE2usCFQAAAAAdAAAAABAD -->
+        <h3 id="learnTitle">What I'm learning:</h3>
+        <ul class="workDesc">
+          <li>Arduino boards</li>
+          <li>C</li>
+          <li>MySQL</li>
+          <li>Enterprise Java (Thymeleaf, Spring Box, RESTful Web Services)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="fullWidth">
+    <div class="inner">
+      <h2>Till Next Time!</h2>
+    </div>
+    <video id="droneVid" controls class="fullWidth" src="./assets/video/sam_jeff_asteroid.MP4"></video>
+  </section>
+
+
+
+  <footer>
+    <p>You can also find me here:</p>
+    <div>
+      <a aria-label="link to github repositories" target="_blank" href="https://github.com/sbelbeck?tab=repositories">
+        <i class="fab fa-github"></i>
+      </a>
+      <a aria-label="link to personal instagram page" target="_blank" href="https://www.instagram.com/smbelbeck/?hl=en">
+        <i class="fab fa-instagram-square"></i>
+      </a>
+      <a aria-label="link to personal linkedin page" target="_blank" href="https://www.linkedin.com/in/sam-belbeck-5505a098"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
