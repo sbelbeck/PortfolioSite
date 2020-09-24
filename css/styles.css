@@ -316,9 +316,20 @@ a {
     margin: 250px auto;
     max-width: 700px;
 }
+.javaVidDiv a {
+    color: black;
+    text-align: center;
+    /* display: block; */
+}
 .javaVid{
-    margin: 0px auto;
+    margin: 20px auto;
     max-width: 500px;
+}
+.underline {
+    text-decoration: underline;
+}
+.fa-github{
+    margin: 15px;
 }
 /* end java video page styles */
 
