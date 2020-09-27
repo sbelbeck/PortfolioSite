@@ -238,6 +238,14 @@ video {
     /* image from: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fpylon-cones&psig=AOvVaw267vE7it-x1wz25y9gSsyr&ust=1599496141019000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCyqsz51OsCFQAAAAAdAAAAABAG */
     background-size: cover;
 }
+#war {
+    grid-area:war;
+}
+#war:hover {
+    background-image:url(../assets/images/portfolio/cards.jpg);
+    /* image from https://www.google.com/url?sa=i&url=http%3A%2F%2Fthecardgamepiseigo.blogspot.com%2F2017%2F04%2Fthe-card-game-of-war.html&psig=AOvVaw3QkSUew62wrjGca-XDYOCT&ust=1601325343624000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNC2tfSXiuwCFQAAAAAdAAAAABAQ */
+    background-size: cover;
+}
 .polkadots {
     display: grid;
     justify-items: center;
@@ -249,7 +257,8 @@ video {
                          'pizza . wine'
                          '. student .'
                          'test . dreams'
-                         '. evals .';
+                         '. evals .'
+                         'war . .';
 }
 .golden {
     background-color:goldenrod;
@@ -812,7 +821,8 @@ footer div a i:hover {
                              '. student'
                              'test .'
                              '. dreams'
-                             'evals .';
+                             'evals .'
+                             '. war';
     }
     #grid {
         grid-template-columns: 1fr;
@@ -840,7 +850,8 @@ footer div a i:hover {
                              'student'
                              'test'
                              'dreams'
-                             'evals';
+                             'evals'
+                             'war';
     }
     h1 {
         font-size: 2.5rem;
