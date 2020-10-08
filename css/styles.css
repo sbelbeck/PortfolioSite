@@ -476,11 +476,12 @@ button {
     grid-area: 1 / 1 / 2 / 2;
     padding-top: 10px;
 }
-.workTitle{
+.workTitle, #learnTitle{
     grid-area: 1 / 2 / 2 / 4;
     font-size: 1.3rem;
+    max-width: 350px; 
 }
-.workDesc {
+.workDesc, .learnDesc {
     grid-area: 2 / 1 / 5 / 4;
     font-size: 1.1rem;
 }
@@ -499,16 +500,14 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 'skillsHeader skillsHeader skillsHeader skillsHeader'
-                         'html fiveStar reliable fiveStar3'
-                         'css fiveStar2 timeMgmt fiveStar4'
+                         'html fourStar2 reliable fiveStar3'
+                         'css fourStar3 timeMgmt fiveStar4'
                          'javascript threeStar problemSolving fiveStar5'
                          'java threeHalfStar learn fiveStar6'
                          'linux twoStar2 teamwork fiveStar7'
                          'excel fourStar learning learning'
-                         'ajax oneStar learning learning'
-                         'json oneStar2 learning learning'
                          'sql twoStar learning learning'
-                         'cLang twoStar3 learning learning';
+                         'communication fiveStar2 learning learning';
 }
 #skills h2 {
     margin-bottom: 100px;
@@ -523,6 +522,11 @@ button {
 }
 #learning {
     grid-area: learning;
+    height: 300px;
+}
+#learning h3 {
+    font-size: 1.3rem;
+    text-align: left;
 }
 #html{
     grid-area: html;
@@ -542,17 +546,9 @@ button {
 #excel{
     grid-area: excel;
 }
-#ajax{
-    grid-area: ajax;
-}
-#json{
-    grid-area: json;
-}
+
 #sql{
     grid-area: sql;
-}
-#cLang{
-    grid-area: cLang;
 }
 #reliable{
     grid-area: reliable;
@@ -578,10 +574,7 @@ button {
 .star {
     padding: 5px;
 }
-.fiveStar {
-    grid-area: fiveStar;
-}
-.fiveStar2 {
+.fiveStar2{
     grid-area:fiveStar2;
 }
 .fiveStar3 {
@@ -602,12 +595,12 @@ button {
 /* .fourHalfStar{
     grid-area: fourHalfStar;
 } */
-/* .fourStar3 {
+.fourStar3 {
     grid-area: fourStar3;
 }
 .fourStar2 {
     grid-area: fourStar2;
-} */
+}
 .fourStar {
     grid-area: fourStar;
 }
@@ -622,15 +615,6 @@ button {
 }
 .twoStar2 {
     grid-area:twoStar2;
-}
-.twoStar3 {
-    grid-area:twoStar3;
-}
-.oneStar {
-    grid-area: oneStar;
-}
-.oneStar2 {
-    grid-area: oneStar2;
 }
 .learning{
     margin: 0 auto;
@@ -700,16 +684,14 @@ footer div a i:hover {
     #skills{
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 'skillsHeader skillsHeader'
-                             'html fiveStar'
-                             'css fiveStar2'
+                             'html fourStar2'
+                             'css fourStar3'
                              'javascript threeStar'
                              'java threeHalfStar'
                              'linux twoStar2'
                              'excel fourStar'
-                             'ajax oneStar'
-                             'json oneStar2'
                              'sql twoStar'
-                             'cLang twoStar3'
+                             'communication fiveStar2'
                              'reliable fiveStar3'
                              'timeMgmt fiveStar4'
                              'problemSolving fiveStar5'
@@ -717,20 +699,12 @@ footer div a i:hover {
                              'teamwork fiveStar7'
                              'learning learning';
     }
+
 }
 @media screen and (max-width:1000px) {
     .hidden {
         width: 250px; 
         height: 300px;
-    }
-    .workLogo {
-        max-width: 75px;
-    }
-    .workTitle {
-        font-size: .9rem;
-    }
-    .workDesc {
-        font-size: .7rem;
     }
     .circle {
         width: 125px;
@@ -738,7 +712,7 @@ footer div a i:hover {
     }
     .portfolioTitle{
         font-size: 1rem;
-        margin: 2   0px auto 10px;
+        margin: 20px auto 10px;
     }
     .description {
         font-size: 0.8rem;
@@ -754,7 +728,18 @@ footer div a i:hover {
     #aboutMe img {
         max-width: 200px;
     }
-    
+    .workLogo {
+        max-width: 75px;
+    }
+    .workTitle {
+        font-size: .9rem;
+    }
+    .workDesc {
+        font-size: .7rem;
+    }
+    .learnDesc {
+        font-size: .9rem;
+    }
 }
 @media screen and (max-width:750px) {
     .small {
