@@ -246,6 +246,14 @@ video {
     /* image from https://www.google.com/url?sa=i&url=http%3A%2F%2Fthecardgamepiseigo.blogspot.com%2F2017%2F04%2Fthe-card-game-of-war.html&psig=AOvVaw3QkSUew62wrjGca-XDYOCT&ust=1601325343624000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNC2tfSXiuwCFQAAAAAdAAAAABAQ */
     background-size: cover;
 }
+#taskMgr{
+    grid-area:taskMgr;
+}
+#taskMgr:hover {
+    background-image:url(../assets/images/portfolio/taskMgr.JPG);
+    /*  */
+    background-size: cover;
+}
 .polkadots {
     display: grid;
     justify-items: center;
@@ -253,12 +261,12 @@ video {
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 'game . cricketMeadows'
-                         ' . peb .'
-                         'pizza . wine'
+                         '. war .'
+                         'taskMgr . pizza'
                          '. student .'
                          'test . dreams'
                          '. evals .'
-                         'war . .';
+                         'peb . wine';
 }
 .golden {
     background-color:goldenrod;
@@ -800,14 +808,15 @@ footer div a i:hover {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 'game . '
                              '. cricketMeadows' 
-                             'peb .'
-                             '. pizza'
-                             'wine .'
+                             'war .'
+                             '. taskMgr'
+                             'pizza .'
                              '. student'
                              'test .'
                              '. dreams'
                              'evals .'
-                             '. war';
+                             '. peb'
+                             'wine .';
     }
     #grid {
         grid-template-columns: 1fr;
@@ -829,14 +838,15 @@ footer div a i:hover {
         grid-template-columns: 1fr;
         grid-template-areas: 'game'
                              'cricketMeadows' 
-                             'peb'
+                             'war'
+                             'taskMgr'
                              'pizza'
-                             'wine'
                              'student'
                              'test'
                              'dreams'
                              'evals'
-                             'war';
+                             'peb'
+                             'wine';
     }
     h1 {
         font-size: 2.5rem;
