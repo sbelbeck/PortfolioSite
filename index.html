@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Sam Belbeck's Professional Portfolio for Web and Software Development. A motivated and creative programmer in Sheridan's Software Development and Network Engineering program. I have a self-driven, continuous learning mindset and experience in well designed and easily adaptable object-oriented programming. Always looking for a new challenge and the opportunity for growth. I'm a team player with leadership qualities, looking to make a difference!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam Belbeck - Software/Web Developer</title>
+    <title>Sam Belbeck - Full Stack Developer</title>
     <link rel="stylesheet" href="css/styles.css">   
     <link type="image/png" href="./assets/images/favicon.ico" rel="icon">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat&family=Indie+Flower&family=Quicksand&display=swap" rel="stylesheet">
@@ -19,6 +19,31 @@
           });
         });
         
+        // $(function () {
+        //   $(document).scroll(function () {
+         
+        //   var $ringette = $('#ringette');
+        //   var $portf = $(".split");
+         
+        //   var $game = $("#game");
+        //   $game.toggleClass('gameBubble', $(this).scrollTop() > $portf.height());
+         
+        //   var $cm = $("#cricketMeadows");
+        //   $cm.toggleClass('cmBubble', $(this).scrollTop() > $portf.height());
+         
+        //   var $war = $("#war");
+        //   $war.toggleClass('warBubble', $(this).scrollTop() > $portf.height() + 300);
+         
+        //   var $taskMgr = $("#taskMgr");
+        //   $taskMgr.toggleClass('taskBubble', $(this).scrollTop() > $portf.height() + 300);
+
+        //   var $bookReview = $("#bookReview");
+        //   $bookReview.toggleClass('bookBubble', $(this).scrollTop() > $portf.height() + 300);
+
+
+        //   });
+        // });
+
         let interval = 0;
         const prevButton = document.getElementById("prevArrow");
         const nextButton = document.getElementById("nextArrow")
@@ -119,25 +144,8 @@
           document.getElementById("rbc4").style.display = "none";
           document.getElementById("work5").style.backgroundImage = "url(assets/rbc-logo.png)";
        });
-
-      //  function isInViewport(element) {
-      //   const rect = element.getBoundingClientRect();
-      //   return (
-      //     rect.top >= 0 &&
-      //     rect.left >= 0 &&
-      //     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      //     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      //   );
-      // }
-      // const game = document.getElementById('game');
-      // if (isInViewPort(game)) {
-      //   game.style.backgroundImage = "url(./assets/images/portfolio/game.jpg)";
-      //   game.style.backgroundSize = "cover";
-      //   game.style.transform = "scale(1.5)";
-        
-      // }
-
-      });
+    
+    });
     </script>
 </head>
 <body id="index">
@@ -159,14 +167,14 @@
       <h2 class="inline">About me</h2>
       <img id="me" src="./assets/images/me.png" alt="headshot of Sam Belbeck">
     </div>
-    <p class="aboutMeP right">Hi I'm Sam - a web/software developer in the GTA. I graduated from business school in 2016 then worked at the bank for a few years. I decided to go back to school in Fall of 2019 and have enjoyed every moment of Sheridan's software development and network engineering program since.</p>
+    <p class="aboutMeP right">Hi I'm Sam - an aspiring full stack developer in the GTA. I graduated from business school in 2016 then worked at RBC for a few years. I decided to go back to school in Fall of 2019 and have enjoyed every moment of Sheridan's Software Development and Network Engineering program since.</p>
     <a href="#droneVid"><img src="./assets/images/portfolio/drone2.png" alt="drone picture overlooking a like in a world like view"></a>
     <p class="aboutMeP left">Developing sites and application is a creative process that has helped me fall in love with the journey and pushes me to expand my knowledge and skills in the field every day.</p>
     <img id="ringette" src="./assets/images/ringette.png" alt="ringette pic">
-    <p class="aboutMeP right">I love everything tech, the great outdoors, and sports (go pens)! On my time off you can find me getting in some exercise or activities outdoors, out exploring with my drone, coding away at who knows what, playing Ringette or cozied up on the couch with my sister's pup watching hockey!</p>
+    <p class="aboutMeP right">I love everything tech, the great outdoors, and sports (go pens)! On my time off you can find me getting in some exercise, out exploring with my drone, coding away at who knows what, playing Ringette, or cozied up on the couch with my sister's pup watching hockey!</p>
     <p class="aboutMeP left">Now let's get to the real stuff...</p>
   </section>
-  
+  <div class="split"></div>
   <section id="portfolio" class="grey">
     <div class="inner">
       <h2>Portfolio</h2>
@@ -174,20 +182,20 @@
     <div width="85%">
       <div class="polkadots">
         <div id="game" class="circle darkcyan"><a target="_blank" href="http://belbecsa.dev.fast.sheridanc.on.ca/Zapp/">
-          <p class="portfolioTitle">1st JavaScript Game<br>-ZIM framework</p>
+          <p class="portfolioTitle">1st JavaScript Game<br>ZIM framework</p>
           <p class="description">A double-edged motion controlled game</p></a>
         </div>
         <div id="cricketMeadows" class="circle midnightblue"><a target="_blank" href="http://cricketmeadows.ca">
-            <p class="portfolioTitle">CM Farms Website<br>-Bootstrap</p></a>
+            <p class="portfolioTitle">CM Farms Website<br>Bootstrap</p></a>
         </div>
         <div id="peb" class="circle maroon"><a target="_blank" href="./peb.html">
           <p class="portfolioTitle">Paige Belbeck<br>Resume Website</p></a></div>
         <div id="pizza" class="circle orange"><a href="./pizzaOrder.html">
-          <p class="portfolioTitle">Pizza Ordering<br>Java App</p></a></div>
+          <p class="portfolioTitle">Pizza Ordering<br>JavaFX App</p></a></div>
         <div id="studentApp" class="circle golden"><a id="studentLink" href="./student.html">
-            <p class="portfolioTitle">Student List <br>Filter Java App</p></a></div>
+            <p class="portfolioTitle">Student List Filter<br>JavaFX App</p></a></div>
         <div id="wine" class="circle purple"><a href="./wine.html">
-          <p class="portfolioTitle">Wine Record <br>Java App</p></a></div>
+          <p class="portfolioTitle">Wine Record <br>JavaFX App</p></a></div>
         <div id="test" class="circle pink"><a target="_blank" href="http://belbecsa.dev.fast.sheridanc.on.ca/A5_SamBelbeck.php">
           <p class="portfolioTitle">PHP Basics quiz <br>with hidden answers</p></a>
         </div>
@@ -202,7 +210,10 @@
           <p class="portfolioTitle">War Card Game<br>Java Group Project</p></a>
         </div>
         <div id="taskMgr" class="circle purple"><a target="_blank" href="https://blbtaskmanagement.herokuapp.com/">
-          <p class="portfolioTitle">Task Manager App<br>-SpringBoot Framework</p></a>
+          <p class="portfolioTitle">Task Manager App<br>SpringBoot Framework</p></a>
+        </div>
+        <div id="bookReview" class="circle orange"><a target="_blank" href="https://blbbookreviews.herokuapp.com/">
+          <p class="portfolioTitle">Book Review App<br>SpringBoot Framework</p></a>
         </div>
       </div>
     </div>
@@ -232,10 +243,6 @@
       <i class="fas fa-chevron-right"></i><!-- icon from https://fontawesome.com -->
     </button>
   </section>
-  
-
-
-
   
   <section id="experience" class="grey">
     <div class="inner">
@@ -280,10 +287,6 @@
     </div>
   </section>
   
-  
-
-
-
   <section id="skills" class="white">
     <h2 id="skillsHeader">Skills <br>/ 5 <i class="fas fa-star"></i></h2> <!-- icon from https://fontawesome.com -->
     <h3 id="html">HTML</h3>
