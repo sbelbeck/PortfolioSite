@@ -298,7 +298,13 @@ video {
     background-image:url(../assets/images/portfolio/library.jpg);
     background-size: cover;
 }
-
+#sanitizer {
+    grid-area: sanitizer;
+}
+#sanitizer:hover {
+    background-image:url(../assets/images/portfolio/finalProduct.jpg);
+    background-size: cover;
+}
 .polkadots {
     display: grid;
     justify-items: center;
@@ -312,7 +318,8 @@ video {
                          'test test dreams dreams'
                          '. evals evals .'
                          'pizza pizza wine wine'
-                         '. peb peb .';
+                         '. peb peb .'
+                         'sanitizer sanitizer . .';
 }
 .golden {
     background-color:goldenrod;
@@ -372,6 +379,42 @@ a {
     width: 500px; 
     top: 100px;
     left: calc(50% - 500px / 2);
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+}
+.grid a {
+    color: black;
+    text-decoration: underline;
+}
+.grid,.grid h2 {
+    margin: 50px auto 10px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.grid p {
+    font-size: 1.5rem;
+}
+.grid img, .grid video {
+    width: 35%;
+    display: inline-block;
+    margin: 20px;
+}
+.grid div {
+    margin: 0 auto;
+}
+.innerPageH1 {
+    background-color: white;
+    position: relative;
+    margin: 0 auto;
+    color: black;
+    left: none;
+    top: none;
+    width: 90%;
+    left: calc(50% - 100% / 2);
+    font-size: 3rem;
 }
 /* end portfolio styles */
 
@@ -864,7 +907,8 @@ footer div a i:hover {
                              'evals evals .'
                              '. pizza pizza'
                              'wine wine .'
-                             '. peb peb';
+                             '. peb peb'
+                             'sanitizer sanitizer .';
     }
     #grid {
         grid-template-columns: 1fr;
@@ -895,7 +939,8 @@ footer div a i:hover {
                              'evals'
                              'pizza'
                              'wine'
-                             'peb';
+                             'peb'
+                             'sanitizer';
     }
     h1 {
         font-size: 2.5rem;

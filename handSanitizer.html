@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Hand Sanitizer Dispenser with Arduino</title>
+    <link rel="stylesheet" href="css/styles.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat&family=Indie+Flower&family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1860bf3b6f.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <header class="javaHeader">
+        <nav>
+            <div>
+                <ul class="flex nav-list">
+                  <li class="menu"><a id="back" href="./index.html"><i class="fas fa-chevron-left javaArrow"></i> <!-- icon from https://fontawesome.com --> Home</a></li>
+                </ul>
+            </div>
+        </nav>  
+    </header>
+
+    <main>
+        <h1 class="innerPageH1">Automatic Hand Sanitizer Dispenser</h1>
+
+        <div class="grid">
+            <div>
+                <h2>Step 1: Test program logic</h2>
+                <video controls src="./assets/images/portfolio/handSanitizer/logicTest.mp4" alt="logic test with hardware hookups, using a sensor to turn on a relay which controls a motor. The motor will rotate a CAM that pushes a piston into the pump of the hand sanitizer bottle."></video>
+                <img src="./assets/images/portfolio/handSanitizer/code.JPG" alt="code for program logic written in C">
+                <br><p>Ended up switching to a more powerful motor with a smaller cam attached to it powered by a 9V battery .</p>
+            </div>
+            <div>
+                <h2>Step 2: Create models</h2>
+                <img src="./assets/images/portfolio/handSanitizer/overView.jpg" alt="onShape model of right side from above">
+                <img src="./assets/images/portfolio/handSanitizer/underView.jpg" alt="onShape model of left side from below">
+                <br><p>cam and piston design credit to Jeffrey Belbeck, P. Eng. Models created in <a target="_blank" href="https://www.onshape.com/en/">Onshape</a>.</p>
+        
+            </div>
+            <div>
+                <h2>Step 3: Create the frame and parts using model dimensions</h2>
+                <img src="./assets/images/portfolio/handSanitizer/woodStructure.jpg" alt="wood frame/structure">
+                <video controls src="./assets/images/portfolio/handSanitizer/cuttingPiston.mp4" alt="cutting the piston that pushes the pump to the correct length"></video>
+                <br><p>All heavy machinery operated by the one and only Jeffy Belbeck.</p>
+            </div>
+            <div>
+                <h2>Step 4: Put it all together & make it look pretty!</h2>
+                <img src="./assets/images/portfolio/handSanitizer/putTogether.jpg" alt="">
+                <video controls src="./assets/images/portfolio/handSanitizer/final_product.mp4" alt="final working product"></video>
+                <br><p>cam, select piston parts, drip tray and slide all printed on Jeffy's Creality Ender-3.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
