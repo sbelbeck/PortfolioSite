@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>    <!-- Latest compiled and minified CSS -->
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">  
+    <link rel="stylesheet" href="./css/shop.css"> 
+    <link type="image/png" href="./assets/images/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat&family=Indie+Flower&family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1860bf3b6f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>     
+        $(document).ready(function(){
+            $('.hamburger').on('click', function(){
+                // toggle class show the menu and exit bar when you click the hamburger
+                $('.nav-list-div').toggleClass('show');
+                    $('.exit-menu').toggleClass('show');   
+            });
+
+            $('.exit-menu').on('click', function(){
+                // toggle class unshow the menu and exit bar when you click the exit (x)
+                $('.nav-list-div').toggleClass('show');
+                    $('.exit-menu').toggleClass('show');
+            });
+        });
+    </script>       
+    <title>Hockey
+     Magnets</title>
+</head>
+<body>  
+    <nav class="shopNav">
+        <div class="shopGrid">
+            <a class="shopLogo" href="./shop.html"><img class="logo header-logo" src="assets/images/favicon.ico" alt="belbeck logo"></a>
+            <h1 class="shopName">Shop</h1>
+            <p class="shopHamburger hamburger"><i class="fas fa-bars" aria-hidden="true"></i><span class="sr-only">click here to open the menu</span></p>
+        </div>
+        <div class="nav-list-div">
+            <ul class="nav-list">
+            <li class="exit-menu menu"><i class="fas fa-times" aria-hidden="true"></i><span class="sr-only">click here to close the menu</span></li>
+            <li class="menu"><a href="./shop.html">home</a></li>        
+            <li class="menu"><a href="#">Products</a>
+                <ul class="drop-menu">
+                    <li><a href="./hockeyMagnets.html">Hockey</a></li>
+                    <li><a href="./nameMagnets.html">Names</a></li>
+                </ul>
+            </li>       
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="flex card">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./innerPages/assets/images/TML.jpg" class="d-block" alt="Toronto Maple Leafs blue magnet">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Size: Small</p>
+                        <p>Price: $$$</p>
+                </div>
+            </div>
+                <div class="carousel-item">
+                    <img src="./innerPages/assets/images/Nala.jpg" class="d-block" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Size: Medium</p>
+                        <p>Price: $$$</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./innerPages/assets/images/PEB.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Size: Large</p>
+                        <p>Price: $$$</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span aria-hidden="true" class="visually-hidden sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span aria-hidden="true" class="visually-hidden sr-only">Next</span>
+            </button>
+        </div>
+        <div class="card-body">
+        <h5 class="card-title">Dog Name Magnet</h5>
+        <p class="card-text">Get your dogs name on a magnet to put on your fridge or window. We can put it on a bone, circle or heart background and can add a paw print!</p>
+        <p class="card-text">Colour Options</p>
+        <a href="#">Link to Etsy pg</a>
+        </div>
+    </main>
+</body>
+</html>

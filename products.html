@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">   
+    <link rel="stylesheet" href="css/shop.css">   
+    <link type="image/png" href="./assets/images/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat&family=Indie+Flower&family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1860bf3b6f.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>     
+      $(document).ready(function(){
+      $('.hamburger').on('click', function(){
+        // toggle class show the menu and exit bar when you click the hamburger
+        $('.nav-list-div').toggleClass('show');
+              $('.exit-menu').toggleClass('show');   
+      });
+
+      $('.exit-menu').on('click', function(){
+        // toggle class unshow the menu and exit bar when you click the exit (x)
+        $('.nav-list-div').toggleClass('show');
+              $('.exit-menu').toggleClass('show');
+      });
+    });
+  </script>     
+    <title>BLB Products</title>
+</head>
+<body>
+  <nav class="shopNav">
+    <div class="shopGrid">
+      <a class="shopLogo" href="./shop.html"><img class="logo header-logo" src="assets/images/favicon.ico" alt="belbeck logo"></a>
+      <h1 class="shopName">Shop</h1>
+      <p class="shopHamburger hamburger"><i class="fas fa-bars" aria-hidden="true"></i><span class="sr-only">click here to open the menu</span></p>
+    </div>
+      <div class="nav-list-div">
+        <ul class="nav-list">
+          <li class="exit-menu menu"><i class="fas fa-times" aria-hidden="true"></i><span class="sr-only">click here to close the menu</span></li>
+          <li class="menu"><a href="./shop.html">home</a></li>        
+          <li class="menu"><a href="#">Products</a>
+            <ul class="drop-menu">
+              <li><a href="./hockeyMagnets.html">Hockey</a></li>
+              <li><a href="./nameMagnets.html">Names</a></li>
+            </ul>
+        </li>       
+        </ul>
+      </div>
+
+  </nav>
+
+    <main>
+      <div class="card">
+        <img src="./innerPages/assets/images/TML.jpg" class="card-img-top" alt="Blue and White Toronto Maple Leaf Magnet">
+        <div class="card-body">
+          <h5 class="card-title">Hockey Magnets</h5>
+          <p class="card-text">10cm Toronto Maple Leaf, Boston Bruin, Tampa Bay Lightening Magnets.</p>
+          <a href="./hockeyMagnets.html" class="btn btn-primary">See Magnets</a>
+        </div>
+      </div>    
+      <div class="card">
+        <img src="./innerPages/assets/images/Nala.jpg" class="card-img-top" alt="White with black outline magnet with Nala">
+        <div class="card-body">
+          <h5 class="card-title">Name Magnets</h5>
+          <p class="card-text">Make a magnet with your name on it. Paw and bone shapes for dog names. Heart and circle shapes for human names. Or bubble letter style with no background.</p>
+          <a href="./nameMagnets.html" class="btn btn-primary">See Magnets</a>
+        </div>
+      </div>
+    </main>
+   
+</body>
+</html>
